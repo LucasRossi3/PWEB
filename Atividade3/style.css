@@ -1,0 +1,21 @@
+header {
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  margin: 10px;
+}
+
+section {
+  margin-top: -20px; /* compensa o espaço em branco gerado pelo header */
+  height: 500px; /* define a altura da section para 200 pixels */
+  width: 1800px;
+}
