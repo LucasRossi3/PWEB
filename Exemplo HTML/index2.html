@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+        <main>
+    <div id="formulario">
+    <form action="" >
+        <section>
+            <fieldset>
+                <legend>Informações pessoais do aluno</legend>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required size="50" maxlength="50"
+                    autofocus />
+                <br />
+                <br />
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" />
+                <br /><br />
+                <label>Sexo</label>
+                <br />
+                <input type="radio" id="masculino" name="sexo" value="M" required />
+                <label>M</label>
+                <input type="radio" id="feminino" name="sexo" value="F" />
+                <label>F</label>
+                <br />
+                <br />
+                <label>Passatempos</label>
+                <br />
+                <input type="checkbox" id="passatempo1" name="passatempos" value="ler" />
+                <label>Ler</label>
+                <br />
+                <input type="checkbox" id="passatempo2" name="passatempos" value="estudar" />
+                <label>Estudar</label>
+                <br />
+                <input type="checkbox" id="passatempo3" name="passatempos" value="esporte" />
+                <label>Praticar esportes</label>
+                <br />
+                <input type="checkbox" id="passatempo4" name="passatempos" value="xadrez" />
+                <label>Xadrez</label>
+                <br />
+                <br />
+                <input type="submit" value="Enviar" />
+                <button type="reset">Limpar</button>
+            </fieldset>
+            <br />
+            <br />
+            <fieldset>
+                <legend>Deixe aqui alguma informação que julgar necessário</legend>
+                <label>Mensagem</label>
+                <br />
+                <textarea name="mensagem" id="mensagem" cols="50" rows="5"></textarea>
+                <br />
+                <br />
+                <label>País</label>
+                <select name="pais" id="pais">
+                    <option value="">Selecione</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="eua">Eua</option>
+                    <option value="georgia">Geórgia</option>
+                </select>
+                <br><br> <button type="button">Cancelar</button>
+            </fieldset>
+
+        </section>
+
+    </form>
+</div>
+</main>
+    <footer class="rodape">Página criada na aula de PWEB - Direitos Resevados - 2023</footer>
+</body>
+
+</html>
