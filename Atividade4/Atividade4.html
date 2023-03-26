@@ -1,72 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="Atividade4.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Atividade4.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <h1 id="titulo1"> Melhores músicas anos 50/60.</h1>
-        <br>
-        <nav>
-            <ul>
-                <!-- Lista não ordenada -->
-                <li> <a href="#">Link 1</a> </li>
-                <li> <a href="#">Link 2</a> </li>
-                <li> <a href="#">Link 3</a> </li>
-            </ul>
-        </nav>
+  <body>
+    <header id="cabecalho">
+      <article class="bloco-cabecalho">
+        <h2 class="titulo-cabecalho">Melhores músicas dos anos 50/60/70</h2>
+      </article>
     </header>
 
-    <main>
-        <section>
-            <article>
-                <div id="pagina">
-                    <div id="cabecalho">
-                        <h1>Cabeçalho</h1>
-                        <p>área do cabeçalho</p>
-                    </div>
-                
-                    <div id="conteudo">
-                        <h2>Conteúdo</h2>
-                        <p>linha 1 do conteúdo</p>
-                        <p>linha 2 do conteúdo</p>
-                        <p>linha 3 do conteúdo</p>
-                        <p>linha 4 do conteúdo</p>
-                        <p>linha 5 do conteúdo</p>
-                        <p>linha 6 do conteúdo</p>
-                        <p>linha 7 do conteúdo</p>
-                        <p>linha 7 do conteúdo</p>
-                        <p>linha 9 do conteúdo</p>
-                        <p>linha 10 do conteúdo</p>
-                    
-                        </div>
-                
-                    <div id="lateral">
-                        <h3>Barra Lateral</h3>
-                        <p>texto1 da barra lateral </p>
-                        <p>texto2 da barra lateral </p>
-                    </div>
-                    
-                    <div id="rodape">
-                        <h4>Rodapé da Página</h4>
-                    </div>
-            </article>
-            <article id="teste">
-                    AAA
-            </article>
-        </section>
+    <main id="principal">
+      <article class="bloco-principal">
+        <article class="Musica">
+          <h2 class="titulo-Musica">"Hey Jude" - The Beatles</h2>
+          <p class="texto-Musica">
+            "Hey Jude" é uma das músicas mais famosas dos Beatles e foi lançada
+            em agosto de 1968. A música foi escrita por Paul McCartney e
+            originalmente foi feita como um consolo para Julian Lennon, o filho
+            de John Lennon, quando seus pais se separaram. McCartney escreveu a
+            música originalmente como "Hey Jules", mas mudou para "Hey Jude"
+            porque soava melhor. A música começa com um piano suave e depois
+            cresce com uma orquestra de cordas, acompanhando o coro da música. A
+            letra é muito emocional e fala sobre consolar alguém que está
+            passando por um momento difícil, como é o caso de Julian Lennon na
+            época em que a música foi escrita. A música tem uma das mais famosas
+            e cativantes refrões da história da música pop: "Hey Jude, don't
+            make it bad. Take a sad song and make it better." ("Ei, Jude, não
+            piore as coisas. Pegue uma canção triste e a torne melhor"). A
+            canção é marcada pela presença do coro e de um final repetitivo,
+            onde o coro canta "na na na na-na-na-na-na-na-na-na". "Hey Jude" é
+            uma música icônica dos Beatles e é considerada uma das melhores
+            canções de todos os tempos. A música foi um sucesso comercial e de
+            crítica, alcançando o topo das paradas em todo o mundo. Até hoje, é
+            uma das músicas mais populares dos Beatles e uma das músicas mais
+            conhecidas da música pop.
+          </p>
+          <img
+            src="https://i.guim.co.uk/img/media/8b923bc3655d63ad181f0e4085960918e0b92d06/66_443_2320_1391/master/2320.jpg?width=445&quality=85&dpr=1&s=none"
+            alt="The Beatles"
+            class="imagem"
+          />
+          <audio
+            id="audio1"
+            src="assets/Hey Jude (Remastered 2015).mp3"
+          ></audio>
+          <div class="botoes">
+            <button onclick="playAudio1()" class="button-icones">
+              <img src="assets/play.png" alt="Play" class="icones" />
+            </button>
+            <button onclick="stopAudio1()" class="button-icones">
+              <img src="assets/stop.png" alt="Stop" class="icones" />
+            </button>
+            <button onclick="decreaseVolume1()" class="button-icones">
+              <img src="assets/minus.png" alt="Minus" class="icones" />
+            </button>
+            <button onclick="increaseVolume1()" class="button-icones">
+              <img src="assets/add.png" alt="Add" class="icones" />
+            </button>
+          </div>
+          <script>
+            const audio1 = document.getElementById("audio1");
+
+            function playAudio1() {
+              audio1.play();
+              audioPlayer.pause();
+              audio2.pause();
+              audio1.volume = 0.25;
+              audio1.currentTime = 0;
+            }
+
+            function stopAudio1() {
+              audio1.pause();
+              audio1.currentTime = 0;
+            }
+
+            function decreaseVolume1() {
+              if (audio1.volume > 0) {
+                audio1.volume -= 0.1;
+              }
+            }
+
+            function increaseVolume1() {
+              if (audio1.volume < 1) {
+                audio1.volume += 0.1;
+              }
+            }
+          </script>
+        </article>
+        <article class="Musica">
+          <h2 class="titulo-Musica">
+            "Make your own kind of music" - Mama Cass
+          </h2>
+          <p class="texto-Musica">
+            "Make Your Own Kind of Music" é uma música popular dos anos 60,
+            escrita pela dupla Barry Mann e Cynthia Weil. A canção ficou mais
+            conhecida na voz da cantora Mama Cass Elliot, integrante do grupo
+            The Mamas & The Papas, que a gravou em 1969. A letra de "Make Your
+            Own Kind of Music" é inspiradora e encorajadora, encorajando as
+            pessoas a serem fiéis a si mesmas e a não terem medo de seguir seus
+            próprios caminhos. A música começa com as palavras "Ninguém pode
+            dizer-lhe qual é a música certa para tocar" ("Nobody can tell you
+            what you gotta be"), o que reflete o tema central da canção: ser
+            verdadeiro consigo mesmo. A melodia é animada e cativante, com um
+            arranjo que mistura elementos do pop e do rock. A voz de Mama Cass
+            Elliot dá à música uma qualidade única, com sua interpretação
+            emotiva e poderosa. O refrão da música é um dos mais famosos da
+            história da música pop: "Você tem que fazer a sua própria música,
+            cantar sua própria especialidade, fazer sua própria música, mesmo
+            que ninguém mais cante junto" ("You gotta make your own kind of
+            music, sing your own special song, make your own kind of music, even
+            if nobody else sings along"). "Make Your Own Kind of Music" se
+            tornou um hino para muitos jovens na década de 60, que buscavam se
+            expressar e encontrar sua própria identidade em meio às
+            transformações sociais da época. Até hoje, a música é lembrada como
+            um exemplo inspirador de autoexpressão e de ser fiel a si mesmo,
+            independentemente do que os outros possam pensar.
+          </p>
+          <img
+            src="https://akamai.sscdn.co/uploadfile/letras/albuns/8/f/3/b/01643980629.jpg"
+            alt="Mama Cass"
+            class="imagem"
+          />
+          <audio
+            id="audio2"
+            src="assets/Make Your Own Kind Of Music.mp3"
+          ></audio>
+          <div class="botoes">
+            <button onclick="playAudio2()" class="button-icones">
+              <img src="assets/play.png" alt="Play" class="icones" />
+            </button>
+            <button onclick="stopAudio2()" class="button-icones">
+              <img src="assets/stop.png" alt="Stop" class="icones" />
+            </button>
+            <button onclick="decreaseVolume2()" class="button-icones">
+              <img src="assets/minus.png" alt="Minus" class="icones" />
+            </button>
+            <button onclick="increaseVolume2()" class="button-icones">
+              <img src="assets/add.png" alt="Add" class="icones" />
+            </button>
+          </div>
+          <script>
+            const audio2 = document.getElementById("audio2");
+
+            function playAudio2() {
+              audio2.play();
+              audioPlayer.pause();
+              audio1.pause();
+              audio2.volume = 0.25;
+              audio2.currentTime = 0;
+            }
+
+            function stopAudio2() {
+              audio2.pause();
+              audio2.currentTime = 0;
+            }
+
+            function decreaseVolume2() {
+              if (audio2.volume > 0) {
+                audio2.volume -= 0.1;
+              }
+            }
+
+            function increaseVolume2() {
+              if (audio2.volume < 1) {
+                audio2.volume += 0.1;
+              }
+            }
+          </script>
+        </article>
+        <article class="Musica">
+          <h2 class="titulo-Musica">
+            "You Gave me a Mountain" - Elvis Presley
+          </h2>
+          <p class="texto-Musica">
+            "You Gave Me a Mountain" é uma música country escrita por Marty
+            Robbins, que foi gravada por Elvis Presley em 1973. A música é uma
+            balada emocional sobre um homem que se sente sobrecarregado e
+            cansado da vida, e que acredita que só a montanha pode oferecer-lhe
+            um refúgio e um sentido de paz. A interpretação de Elvis Presley é
+            muito comovente, com sua voz profunda e emotiva transmitindo a dor e
+            a angústia do protagonista da música. O arranjo da canção é simples,
+            com uma guitarra acústica e um piano acompanhando a voz de Presley.
+            A letra da música é muito poética e evocativa, com uma forte imagem
+            da montanha como símbolo de força e proteção. A música começa com os
+            versos "Nasci numa chuva torrencial / Nas margens do Tennessee / Mas
+            minha mãe me criou bem / Ela disse que um homem deve ser forte".
+            Esses versos dão o tom da música, mostrando a luta do protagonista
+            para enfrentar as dificuldades da vida. "You Gave Me a Mountain" é
+            uma das músicas mais poderosas de Elvis Presley, mostrando a
+            profundidade emocional e a habilidade vocal do cantor. A música se
+            tornou um dos destaques do repertório de Elvis na década de 70, e
+            até hoje é lembrada como uma das suas performances mais emocionantes
+            e comoventes.
+          </p>
+          <img src="assets/elvis2.png" alt="Elvis" class="imagem" />
+          <audio
+            id="audioPlayer"
+            src="assets/Elvis Presley - You Gave Me A Mountain.mp3"
+          ></audio>
+          <div class="botoes">
+            <button onclick="playAudio()" class="button-icones">
+              <img src="assets/play.png" alt="Play" class="icones" />
+            </button>
+            <button onclick="stopAudio()" class="button-icones">
+              <img src="assets/stop.png" alt="Stop" class="icones" />
+            </button>
+            <button onclick="decreaseVolume()" class="button-icones">
+              <img src="assets/minus.png" alt="Minus" class="icones" />
+            </button>
+            <button onclick="increaseVolume()" class="button-icones">
+              <img src="assets/add.png" alt="Add" class="icones" />
+            </button>
+          </div>
+          <script>
+            const audioPlayer = document.getElementById("audioPlayer");
+
+            function playAudio() {
+              audioPlayer.play();
+              audio2.pause();
+              audio1.pause();
+              audioPlayer.volume = 0.25;
+              audioPlayer.currentTime = 0;
+            }
+
+            function stopAudio() {
+              audioPlayer.pause();
+              audioPlayer.currentTime = 0;
+            }
+
+            function decreaseVolume() {
+              if (audioPlayer.volume > 0) {
+                audioPlayer.volume -= 0.1;
+              }
+            }
+
+            function increaseVolume() {
+              if (audioPlayer.volume < 1) {
+                audioPlayer.volume += 0.1;
+              }
+            }
+          </script>
+        </article>
+      </article>
     </main>
 
-
-    <footer>
-
-    </footer>
-</body>
-
+    <footer id="rodape"></footer>
+  </body>
 </html>
