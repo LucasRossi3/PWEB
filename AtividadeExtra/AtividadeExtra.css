@@ -1,0 +1,80 @@
+.bloco-principal{
+    width: 500px;
+    height: 500px;
+    background-color: green;
+}
+
+
+
+@media (max-width: 1920px) {
+	.bloco-principal{
+        background-color: yellow;
+    }
+	h1::after{
+        content: "Amarelo";
+        font-size: 30px;
+    }
+
+}
+
+/* 700px ou menor  */
+@media (max-width: 1366px) {
+
+	.bloco-principal{
+        background-color: blue;
+    }
+    h1::after{
+        content: "Azul";
+        font-size: 30px;
+    }
+
+}
+
+/*  480px or menor  */
+@media (max-width: 1080px) {
+
+	.bloco-principal{
+        background-color: red;
+    }
+    h1::after{
+        content: "Vermelho";
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+	.bloco-principal{
+        background-color: pink;
+    }
+    h1::after{
+        content: "Rosa";
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+	.bloco-principal{
+        background-color: orange;
+    }
+    h1::after{
+        content: "Laranja";
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+	.bloco-principal{
+        background-color: gray;
+    }
+    h1::after{
+        content: "Cinza";
+        font-size: 30px;
+    }
+
+}
