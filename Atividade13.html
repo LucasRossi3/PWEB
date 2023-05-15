@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tranformaMaiuscula(objeto) {
+            inputText = document.getElementById("idTexto");
+         
+            if(objeto.id=="idMaiusc"){
+                inputText.value = inputText.value.toUpperCase();
+                document.forms.teste.Minuscula.checked = false;
+            }
+            else{
+                inputText.value = inputText.value.toLowerCase();
+                document.forms.teste.Maiuscula.checked = false;
+            }
+
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="teste">
+        <div id="principal" width=200 heigth=200 align=center>
+            Insira um texto:
+            <input name="Texto" type="text" id="idTexto" size="20" maxlength="20">
+            <br>
+            <input name="Maiuscula" type="checkbox" id="idMaiusc"  value="1" onclick="tranformaMaiuscula(this);"> Tranforme em Maiúscula
+            <br>
+            <input name="Minuscula" type="checkbox" id="idMinusc" value="2" onclick="tranformaMaiuscula(this);"> Tranforme em Minúscula
+        </div>
+    </form>
+</body>
+</html>
