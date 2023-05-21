@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Seletor de Cursos</title>
-  </head>
-  <body>
-    <h1>Seletor de Cursos</h1>
-    <select id="cursos" onchange="abrirCurso()">
-      <option value="">Selecione um curso</option>
-      <option value="curso1">Curso 1</option>
-      <option value="curso2">Curso 2</option>
-      <option value="curso3">Curso 3</option>
-    </select>
-
+    <link rel="stylesheet" href="Atividade15.css" />
+    <title>Seleção de Cursos</title>
     <script>
-      function abrirCurso() {
+      function abrirJanela() {
         var select = document.getElementById("cursos");
-        var cursoSelecionado = select.value;
 
-        if (cursoSelecionado !== "") {
-          var confirmacao = confirm(
-            "Deseja realmente abrir o curso " + cursoSelecionado + "?"
-          );
+        var cursoSelecionado = select.options[select.selectedIndex].text;
+        var confirmacao = confirm(
+          "Deseja abrir a janela com o curso: " + cursoSelecionado + "?"
+        );
 
-          if (confirmacao) {
-            var novaJanela = window.open("", "", "width=600,height=300");
-            novaJanela.document.write("<h2>" + cursoSelecionado + "</h2>");
-            novaJanela.document.write(
-              "<p>Algumas informações sobre o curso " +
-                cursoSelecionado +
-                "</p>"
-            );
-          }
+        if (select.value == 1) {
+          var url =
+            "https://www.vestibularfatec.com.br/unidades-cursos/curso.asp?c=194";
+          var janela = window.open(url, "_blank", "width=600,height=300");
+        }
+        if (select.value == 2) {
+          var url =
+            "https://www.vestibularfatec.com.br/unidades-cursos/curso.asp?c=179";
+          var janela = window.open(url, "_blank", "width=600,height=300");
+        }
+        if (select.value == 3) {
+          var url =
+            "https://www.vestibularfatec.com.br/unidades-cursos/curso.asp?c=234";
+          var janela = window.open(url, "_blank", "width=600,height=300");
         }
       }
     </script>
+  </head>
+  <body>
+    <h1>Selecione um Curso</h1>
+    <select id="cursos" onchange="abrirJanela()">
+      <option value="">Selecione um curso</option>
+      <option value="1">Análise e Desenvolvimento de Sistemas</option>
+      <option value="2">Logística</option>
+      <option value="3">Polímeros</option>
+    </select>
   </body>
 </html>
