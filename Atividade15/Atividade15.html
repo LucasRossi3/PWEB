@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seletor de Cursos</title>
+  </head>
+  <body>
+    <h1>Seletor de Cursos</h1>
+    <select id="cursos" onchange="abrirCurso()">
+      <option value="">Selecione um curso</option>
+      <option value="curso1">Curso 1</option>
+      <option value="curso2">Curso 2</option>
+      <option value="curso3">Curso 3</option>
+    </select>
+
+    <script>
+      function abrirCurso() {
+        var select = document.getElementById("cursos");
+        var cursoSelecionado = select.value;
+
+        if (cursoSelecionado !== "") {
+          var confirmacao = confirm(
+            "Deseja realmente abrir o curso " + cursoSelecionado + "?"
+          );
+
+          if (confirmacao) {
+            var novaJanela = window.open("", "", "width=600,height=300");
+            novaJanela.document.write("<h2>" + cursoSelecionado + "</h2>");
+            novaJanela.document.write(
+              "<p>Algumas informações sobre o curso " +
+                cursoSelecionado +
+                "</p>"
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
