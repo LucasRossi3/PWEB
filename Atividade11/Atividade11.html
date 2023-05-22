@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo de Funções em JavaScript</title>
+  </head>
+  <body>
+    <h1>Exemplo de Funções em JavaScript</h1>
+
+    <div id="resultadoRetangulo"></div>
+    <div id="resultadoConta"></div>
+    <div id="resultadoCorrente"></div>
+    <div id="resultadoPoupanca"></div>
+
+    <script>
+      function Retangulo(base, altura) {
+        this.base = base;
+        this.altura = altura;
+        this.calcularArea = function () {
+          return this.base * this.altura;
+        };
+      }
+
+      function Conta(nome, correntista, banco, numeroConta, saldo) {
+        this.nome = nome;
+        this.correntista = correntista;
+        this.banco = banco;
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+      }
+
+      function CorrenteSaldoEspecial(
+        nome,
+        correntista,
+        banco,
+        numeroConta,
+        saldo,
+        limite
+      ) {
+        Conta.call(this, nome, correntista, banco, numeroConta, saldo);
+        this.limite = limite;
+      }
+
+      function PoupancaJuros(
+        nome,
+        correntista,
+        banco,
+        numeroConta,
+        saldo,
+        dataVencimento
+      ) {
+        Conta.call(this, nome, correntista, banco, numeroConta, saldo);
+        this.dataVencimento = dataVencimento;
+      }
+
+      // Criando objetos e executando os métodos
+
+      var retangulo = new Retangulo(10, 5);
+      var areaRetangulo = retangulo.calcularArea();
+      document.getElementById("resultadoRetangulo").innerText =
+        "Área do Retângulo: " + areaRetangulo;
+
+      var conta = new Conta(
+        "Conta Padrão",
+        "Fulano",
+        "Banco ABC",
+        "123456",
+        1000
+      );
+      document.getElementById("resultadoConta").innerText =
+        "Dados da Conta: " + JSON.stringify(conta);
+
+      var correnteSaldoEspecial = new CorrenteSaldoEspecial(
+        "Conta Corrente",
+        "João",
+        "Banco ABC",
+        "123456",
+        1000,
+        500
+      );
+      document.getElementById("resultadoCorrente").innerText =
+        "Dados da Conta Corrente com Saldo Especial: " +
+        JSON.stringify(correnteSaldoEspecial);
+
+      var poupancaJuros = new PoupancaJuros(
+        "Conta Poupança",
+        "Maria",
+        "Banco XYZ",
+        "654321",
+        5000,
+        "01/01/2023"
+      );
+      document.getElementById("resultadoPoupanca").innerText =
+        "Dados da Conta Poupança com Juros: " + JSON.stringify(poupancaJuros);
+    </script>
+  </body>
+</html>
